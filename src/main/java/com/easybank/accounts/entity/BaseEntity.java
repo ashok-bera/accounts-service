@@ -2,16 +2,15 @@ package com.easybank.accounts.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-@Getter
-@Setter
+@Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class BaseEntity {
     @Column(updatable = false)
     private LocalDateTime createdAt;

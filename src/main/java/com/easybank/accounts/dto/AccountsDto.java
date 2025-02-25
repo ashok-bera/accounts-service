@@ -3,8 +3,12 @@ package com.easybank.accounts.dto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
+@Getter
+@Setter
 public class AccountsDto {
 
     @NotEmpty(message = "AccountNumber can not be a null or empty")

@@ -4,14 +4,15 @@ package com.easybank.accounts.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Getter
+import lombok.Data;
+
 @Setter
-@ToString
+@Getter
+@EqualsAndHashCode(callSuper = true)
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 public class Accounts extends BaseEntity {
-
     private long customerId;
     @Id
     @Column(name = "account_number")
@@ -19,3 +20,4 @@ public class Accounts extends BaseEntity {
     private String accountType;
     private String branchAddress;
 }
+
